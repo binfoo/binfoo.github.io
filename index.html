@@ -347,7 +347,9 @@
             <h2 id="win10系统坑"><a href="#win10系统坑" class="headerlink" title="win10系统坑"></a>win10系统坑</h2><ul>
 <li>Docker for Windows的当前版本运行在64位Windows 10 Pro，专业版、企业版和教育版（1607年纪念更新，版本14393或更高版本）上。</li>
 <li>家庭版是不行的，如果你是家庭版，那么一是升级到专业版</li>
-<li>企业版版本较低也是不行的，我的就是企业版，小版本低于11000的，各种倒腾，Docker for Windows肯定是不行的，都不给机会安装。然后就是使用ToolBox，也是巨坑，各种报错，就是不成功，比如报错：Error creating machine: Error in driver during machine creation: Unable to start the VM: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe startvm default –type headless failed:<br>VBoxManage.exe: error: The virtual machine ‘default’ has terminated unexpectedly during startup with exit code 1 (0x1).  More details may be available in ‘C:\Users\QueenLi.docker\machine\machines\default\default\Logs\VBoxHardening.log’<br>VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component MachineWrap, interface IMachine Looks like something went wrong in step ´Checking if machine default exists´… Press any key to continue…<h2 id="Docker-ToolBox坑"><a href="#Docker-ToolBox坑" class="headerlink" title="Docker ToolBox坑"></a>Docker ToolBox坑</h2></li>
+<li>企业版版本较低也是不行的，我的就是企业版，小版本低于11000的，各种倒腾，Docker for Windows肯定是不行的，都不给机会安装。然后就是使用ToolBox，也是巨坑，各种报错，就是不成功，比如报错：Error creating machine: Error in driver during machine creation: Unable to start the VM: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe startvm default –type headless failed:<br>VBoxManage.exe: error: The virtual machine ‘default’ has terminated unexpectedly during startup with exit code 1 (0x1).  More details may be available in ‘C:\Users\QueenLi.docker\machine\machines\default\default\Logs\VBoxHardening.log’<br>VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component MachineWrap, interface IMachine Looks like something went wrong in step ´Checking if machine default exists´… Press any key to continue…</li>
+</ul>
+<h2 id="Docker-ToolBox坑"><a href="#Docker-ToolBox坑" class="headerlink" title="Docker ToolBox坑"></a>Docker ToolBox坑</h2><ul>
 <li>使用docker官网的Docker ToolBox各种版本，均不成功，究其原因是win10版本低、ToolBox兼容差</li>
 <li>网上很多的安装教程可能对于你是不管用的</li>
 </ul>
