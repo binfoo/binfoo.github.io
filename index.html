@@ -274,6 +274,147 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/07/win10安装docker踩过的坑/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/07/win10安装docker踩过的坑/" itemprop="url">win10安装docker踩过的坑</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-04-07T23:26:38+08:00">2018-04-07</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="win10系统坑"><a href="#win10系统坑" class="headerlink" title="win10系统坑"></a>win10系统坑</h2><ul>
+<li>Docker for Windows的当前版本运行在64位Windows 10 Pro，专业版、企业版和教育版（1607年纪念更新，版本14393或更高版本）上。</li>
+<li>家庭版是不行的，如果你是家庭版，那么一是升级到专业版</li>
+<li>企业版版本较低也是不行的，我的就是企业版，小版本低于11000的，各种倒腾，Docker for Windows肯定是不行的，都不给机会安装。然后就是使用ToolBox，也是巨坑，各种报错，就是不成功，比如报错：Error creating machine: Error in driver during machine creation: Unable to start the VM: C:\Program Files\Oracle\VirtualBox\VBoxManage.exe startvm default –type headless failed:<br>VBoxManage.exe: error: The virtual machine ‘default’ has terminated unexpectedly during startup with exit code 1 (0x1).  More details may be available in ‘C:\Users\QueenLi.docker\machine\machines\default\default\Logs\VBoxHardening.log’<br>VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component MachineWrap, interface IMachine Looks like something went wrong in step ´Checking if machine default exists´… Press any key to continue…<h2 id="Docker-ToolBox坑"><a href="#Docker-ToolBox坑" class="headerlink" title="Docker ToolBox坑"></a>Docker ToolBox坑</h2></li>
+<li>使用docker官网的Docker ToolBox各种版本，均不成功，究其原因是win10版本低、ToolBox兼容差</li>
+<li>网上很多的安装教程可能对于你是不管用的</li>
+</ul>
+<h2 id="正确安装姿势"><a href="#正确安装姿势" class="headerlink" title="正确安装姿势"></a>正确安装姿势</h2><ol>
+<li>安装win10专业版，怎么安装百度一堆。如果版本不满足要求，使用官方提供的神器：Windows10Upgrade9252.exe中文名叫做win10易升，地址是<a href="https://download.microsoft.com/download/0/4/7/047889D0-578C-4A44-A38F-7F30A6CB3809/current-version/Windows10Upgrade9252.exe" target="_blank" rel="noopener">Windows10Upgrade9252.exe</a>,用这个官方软件就可以升级到win10的最新版本，升级过程还是非常缓慢的。我升级之后就卸载了它</li>
+<li>官网下载Docker for Windows Installer.exe，我的版本是18.03.0-ce</li>
+<li>如果你满足Docker for Windows的环境条件了，那么首先检查电脑的虚拟化开启了没有：进入任务管理器（ctrl+alt+delete），点击性能-&gt;cpu ,查看虚拟化是否已启用，如果虚拟化是已禁用，那么你需要重启电脑进入bios开启虚拟化（我们的发的笔记本cpu都是支持虚拟化的，重启时进入bios按esc -&gt; 再按f12 -&gt; 去开启虚拟化）</li>
+<li>然后再是进入电脑的控制面板-&gt;程序-&gt;启用或关闭Windows功能-&gt;把Hyper-v勾上，启用后电脑会重启</li>
+<li>然后就是无脑安装Docker for Windows Installer.exe，一路采用默认，最后我还安装在了C盘，就怕出啥幺蛾子。</li>
+</ol>
+<h2 id="推荐靠谱的文章链接"><a href="#推荐靠谱的文章链接" class="headerlink" title="推荐靠谱的文章链接"></a>推荐靠谱的文章链接</h2><ol>
+<li><a href="https://blog.csdn.net/hunan961/article/details/79484098" target="_blank" rel="noopener">WIN10中DOCKER的安装与使用</a></li>
+<li><a href="https://blog.csdn.net/qq_33326449/article/details/79562030" target="_blank" rel="noopener">windows 10中docker的安装</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/05/MarkDown学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -580,7 +721,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">state.posts</span>
                   </a>
                 </div>
